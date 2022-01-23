@@ -5,9 +5,11 @@ import Footer from '@layout/Footer'
 const Layout = ({ children }) => {
 	return (
 		<>
-			<Header />
-			{children}
-			<Footer />
+			<div className="font-sans antialiased">
+				<Header />
+				<div className="container mx-auto">{children}</div>
+				<Footer />
+			</div>
 		</>
 	)
 }

@@ -19,6 +19,7 @@
 		"paths": {
 			"@components/*": ["components/*"],
 			"@layout/*": ["components/Layout/*"],
+			"@helper/*": ["helper/*"],
 			"@styles/*": ["styles/*"]
 		},
 		"incremental": true
