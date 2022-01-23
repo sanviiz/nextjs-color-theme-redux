@@ -3,6 +3,7 @@ import Head from 'next/head'
 import NavTab from '@components/NavTab/NavTab'
 import BottomTab from '@components/BottomTab/BottomTab'
 import QueryTab from '@components/QueryTab/QueryTab'
+import QueryResult from '@components/QueryResult/QueryResult'
 
 const Home: NextPage = () => {
 	return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
 
 			<NavTab />
 			<QueryTab />
+			<QueryResult />
 			<BottomTab />
 		</>
 	)

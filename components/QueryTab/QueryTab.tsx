@@ -29,7 +29,7 @@ const SectionExpand = () => {
 const QueryTab = () => {
 	return (
 		<>
-			<div className="border-b border-borderColor pt-6 pb-4 px-2.5">
+			<div className="border-b border-borderColor pt-6 pb-4 px-2.5 bg-white sticky top-[169px]">
 				<div className="relative text-center">
 					<div className="flex justify-between items-center pl-6 pr-2 gap-x-8 mb-6">
 						<DateTypeTab />

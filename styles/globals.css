@@ -5,3 +5,7 @@
 /*  This project supported ui color customize (global config).
     Open `tailwind.config.js` and change color value in `colors` object.
     Path: tailwind.config.js -> theme -> extend -> colors   */
+
+body {
+	background-color: #334155;
+}

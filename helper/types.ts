@@ -9,3 +9,10 @@ export type DateProps = {
 	date: number
 	type?: 'current' | 'selected' | 'disabled'
 }
+
+export type DailyCardResult = {
+	icon: JSX.Element
+	type: string
+	total: number
+	unit?: string
+}
