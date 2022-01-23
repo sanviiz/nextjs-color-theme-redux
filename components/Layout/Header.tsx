@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillHome, AiFillSliders } from 'react-icons/ai'
+import { AiFillHome, AiFillControl } from 'react-icons/ai'
 
 const Header = () => {
 	return (
@@ -9,7 +9,7 @@ const Header = () => {
 				<span className="text-lg font-semibold leading-5">
 					All Report
 				</span>
-				<AiFillSliders className="text-2xl" />
+				<AiFillControl className="text-2xl" />
 			</div>
 		</>
 	)

@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import NavTab from '@components/NavTab/NavTab'
-import BottomBar from '@components/BottomBar/BottomBar'
+import BottomTab from '@components/BottomTab/BottomTab'
+import QueryTab from '@components/QueryTab/QueryTab'
 
 const Home: NextPage = () => {
 	return (
@@ -16,7 +17,8 @@ const Home: NextPage = () => {
 			</Head>
 
 			<NavTab />
-			<BottomBar />
+			<QueryTab />
+			<BottomTab />
 		</>
 	)
 }

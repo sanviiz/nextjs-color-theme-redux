@@ -1,5 +1,5 @@
 import React from 'react'
-import BottomBarItem from '@components/BottomBarItem/BottomBarItem'
+import BottomTabItem from '@components/BottomTabItem/BottomTabItem'
 import {
 	AiOutlinePlusSquare,
 	AiFillCheckCircle,
@@ -8,28 +8,28 @@ import {
 	AiFillNotification,
 } from 'react-icons/ai'
 
-function BottomBar() {
+function BottomTab() {
 	return (
 		<>
 			<div className="fixed bottom-0 border-t border-borderColor pt-4 pb-4 px-6 flex justify-between w-full">
-				<BottomBarItem
+				<BottomTabItem
 					icon={<AiOutlinePlusSquare className="text-lg" />}
 					text="Write"
 				/>
-				<BottomBarItem
+				<BottomTabItem
 					icon={<AiFillCheckCircle className="text-lg" />}
 					text="Approval"
 				/>
-				<BottomBarItem
+				<BottomTabItem
 					icon={<AiFillNotification className="text-lg" />}
 					text="Report"
 				/>
-				<BottomBarItem
+				<BottomTabItem
 					icon={<AiFillPieChart className="text-lg" />}
 					text="Statistic"
 					active
 				/>
-				<BottomBarItem
+				<BottomTabItem
 					icon={<AiTwotoneSetting className="text-lg" />}
 					text="Setting"
 				/>
@@ -38,4 +38,4 @@ function BottomBar() {
 	)
 }
 
-export default BottomBar
+export default BottomTab

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
 		<>
 			<div className="font-sans antialiased">
 				<Header />
-				<div className="container mx-auto">{children}</div>
+				{children}
 				<Footer />
 			</div>
 		</>

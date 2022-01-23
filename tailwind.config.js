@@ -5,15 +5,15 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			/* START section for config all colors in this project */
 			colors: {
-				primaryText: '#066cfa',
-				secondaryText: '#d1d5db',
+				/* START section for config all colors in this project */
+				primary: '#066cfa',
+				secondary: '#d1d5db',
 				borderColor: '#d1d5db',
 				headerBackground: '#066cfa',
 				headerText: '#ffffff',
+				/* END section */
 			},
-			/* END section */
 		},
 	},
 	plugins: [],
