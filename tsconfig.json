@@ -20,7 +20,8 @@
 			"@components/*": ["components/*"],
 			"@layout/*": ["components/Layout/*"],
 			"@helper/*": ["helper/*"],
-			"@styles/*": ["styles/*"]
+			"@styles/*": ["styles/*"],
+			"@redux/*": ["redux/*"]
 		},
 		"incremental": true
 	},

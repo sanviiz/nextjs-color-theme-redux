@@ -1,5 +1,9 @@
 import React from 'react'
-import type { DailyCardResult } from '@helper/types'
+import CountUp from 'react-countup'
+import type { DailyCardResultProps } from '@helper/types'
+import { useDispatch, useSelector } from 'react-redux'
+import { mockDetail } from '@redux/actions'
+import { getDetailState } from '@redux/selector'
 import {
 	AiOutlineLike,
 	AiOutlineComment,
@@ -7,7 +11,7 @@ import {
 	AiOutlineSketch,
 } from 'react-icons/ai'
 
-const CardResult = ({ icon, type, total, unit }: DailyCardResult) => {
+const DailyCardResult = ({ icon, type, total, unit }: DailyCardResultProps) => {
 	return (
 		<>
 			<div className="pt-6 pb-12 border border-borderColor rounded-md flex flex-col gap-y-6 justify-between items-center">
@@ -16,7 +20,11 @@ const CardResult = ({ icon, type, total, unit }: DailyCardResult) => {
 					{type}
 				</div>
 				<div className="flex flex-col items-center gap-y-2">
-					<span className="text-4xl font-semibold">{total}</span>
+					<CountUp
+						className="inline text-4xl font-semibold"
+						end={total}
+						duration={1}
+					/>
 					<span className="text-sm text-gray-400 font-semibold">
 						{unit ?? type}
 					</span>
@@ -27,39 +35,46 @@ const CardResult = ({ icon, type, total, unit }: DailyCardResult) => {
 }
 
 const DailyResult = () => {
+	const dispatch = useDispatch()
+	const details = useSelector(getDetailState)
+
+	React.useEffect(() => {
+		dispatch(mockDetail())
+	}, [])
+
 	return (
 		<>
 			<div className="px-8">
 				<div className="grid grid-cols-2 gap-4">
-					<CardResult
+					<DailyCardResult
 						icon={
 							<AiOutlineLike className="inline-block text-xl mb-1 mr-1" />
 						}
 						type="Like"
-						total={34}
+						total={details.like}
 						unit="Likes"
 					/>
-					<CardResult
+					<DailyCardResult
 						icon={
 							<AiOutlineComment className="inline-block text-xl mb-1 mr-1" />
 						}
 						type="Comment"
-						total={56}
+						total={details.comment}
 						unit="Comments"
 					/>
-					<CardResult
+					<DailyCardResult
 						icon={
 							<AiOutlineGift className="inline-block text-xl mb-1 mr-1" />
 						}
 						type="Point"
-						total={450}
+						total={details.point}
 					/>
-					<CardResult
+					<DailyCardResult
 						icon={
 							<AiOutlineSketch className="inline-block text-xl mb-1 mr-1" />
 						}
 						type="Diamond"
-						total={40}
+						total={details.diamond}
 					/>
 				</div>
 			</div>
